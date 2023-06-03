@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -64,6 +65,30 @@
                                     <action selector="showPopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BfD-As-XYf"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VJu-WP-eGJ">
+                                <rect key="frame" x="0.0" y="702" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-pd-e37">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="三角气泡"/>
+                                        <connections>
+                                            <action selector="switchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BC-bo-a5h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooA-Wn-pA1">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="虚线气泡"/>
+                                        <connections>
+                                            <action selector="switchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUq-mo-Ayl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4Pm-5q-2RQ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,16 +97,22 @@
                             <constraint firstItem="9Pe-Ek-Kue" firstAttribute="top" secondItem="H7w-Fx-oaq" secondAttribute="bottom" constant="86" id="6yT-lp-kpK"/>
                             <constraint firstItem="8Y4-XF-C4a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="G2w-tu-UOb"/>
                             <constraint firstItem="8Y4-XF-C4a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="J6Q-mJ-gqa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VJu-WP-eGJ" secondAttribute="trailing" id="NFD-TC-1q9"/>
                             <constraint firstItem="ehS-0L-dnx" firstAttribute="top" secondItem="8Y4-XF-C4a" secondAttribute="bottom" constant="156" id="WAJ-VR-Xsy"/>
                             <constraint firstItem="H7w-Fx-oaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="aGk-TO-5g5"/>
                             <constraint firstItem="H7w-Fx-oaq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="aaL-df-IhA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VJu-WP-eGJ" secondAttribute="bottom" constant="100" id="eLF-pc-uYx"/>
+                            <constraint firstItem="VJu-WP-eGJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hrG-yP-V7K"/>
                             <constraint firstItem="9Pe-Ek-Kue" firstAttribute="leading" secondItem="H7w-Fx-oaq" secondAttribute="leading" id="m6z-hg-6KR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btns" destination="VJu-WP-eGJ" id="jkG-a6-e9A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="72"/>
+            <point key="canvasLocation" x="124.6376811594203" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
