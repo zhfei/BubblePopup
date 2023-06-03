@@ -18,6 +18,12 @@
 		918E69162A2A4206006B8771 /* BubblePopupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69152A2A4206006B8771 /* BubblePopupUITestsLaunchTests.swift */; };
 		918E69242A2A422F006B8771 /* BubblePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69232A2A422F006B8771 /* BubblePopup.swift */; };
 		918E69262A2A423D006B8771 /* BubblePopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69252A2A423D006B8771 /* BubblePopupManager.swift */; };
+		918E69292A2B4A38006B8771 /* BubblePopup1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69282A2B4A38006B8771 /* BubblePopup1.swift */; };
+		918E692B2A2B4A5F006B8771 /* BubblePopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E692A2A2B4A5F006B8771 /* BubblePopupBuilder.swift */; };
+		918E692D2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E692C2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift */; };
+		918E692F2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */; };
+		918E69312A2B4B28006B8771 /* BubblePopupDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69302A2B4B28006B8771 /* BubblePopupDirector.swift */; };
+		918E69332A2B4BD9006B8771 /* BubbleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69322A2B4BD9006B8771 /* BubbleViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		918E69152A2A4206006B8771 /* BubblePopupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		918E69232A2A422F006B8771 /* BubblePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopup.swift; sourceTree = "<group>"; };
 		918E69252A2A423D006B8771 /* BubblePopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupManager.swift; sourceTree = "<group>"; };
+		918E69282A2B4A38006B8771 /* BubblePopup1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopup1.swift; sourceTree = "<group>"; };
+		918E692A2A2B4A5F006B8771 /* BubblePopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupBuilder.swift; sourceTree = "<group>"; };
+		918E692C2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotLineBubblePopupBuilder.swift; sourceTree = "<group>"; };
+		918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleBubblePopupBuilder.swift; sourceTree = "<group>"; };
+		918E69302A2B4B28006B8771 /* BubblePopupDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupDirector.swift; sourceTree = "<group>"; };
+		918E69322A2B4BD9006B8771 /* BubbleViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 		918E68F12A2A4204006B8771 /* BubblePopup */ = {
 			isa = PBXGroup;
 			children = (
+				918E69272A2B4A18006B8771 /* SRC0 */,
 				918E69222A2A4214006B8771 /* SRC */,
 				918E68F22A2A4204006B8771 /* AppDelegate.swift */,
 				918E68F42A2A4204006B8771 /* SceneDelegate.swift */,
@@ -139,6 +152,19 @@
 				918E69252A2A423D006B8771 /* BubblePopupManager.swift */,
 			);
 			path = SRC;
+			sourceTree = "<group>";
+		};
+		918E69272A2B4A18006B8771 /* SRC0 */ = {
+			isa = PBXGroup;
+			children = (
+				918E69282A2B4A38006B8771 /* BubblePopup1.swift */,
+				918E692A2A2B4A5F006B8771 /* BubblePopupBuilder.swift */,
+				918E692C2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift */,
+				918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */,
+				918E69302A2B4B28006B8771 /* BubblePopupDirector.swift */,
+				918E69322A2B4BD9006B8771 /* BubbleViewFactory.swift */,
+			);
+			path = SRC0;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +301,14 @@
 				918E69242A2A422F006B8771 /* BubblePopup.swift in Sources */,
 				918E69262A2A423D006B8771 /* BubblePopupManager.swift in Sources */,
 				918E68F72A2A4204006B8771 /* ViewController.swift in Sources */,
+				918E69332A2B4BD9006B8771 /* BubbleViewFactory.swift in Sources */,
 				918E68F32A2A4204006B8771 /* AppDelegate.swift in Sources */,
+				918E692B2A2B4A5F006B8771 /* BubblePopupBuilder.swift in Sources */,
+				918E69292A2B4A38006B8771 /* BubblePopup1.swift in Sources */,
+				918E69312A2B4B28006B8771 /* BubblePopupDirector.swift in Sources */,
+				918E692F2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift in Sources */,
 				918E68F52A2A4204006B8771 /* SceneDelegate.swift in Sources */,
+				918E692D2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
