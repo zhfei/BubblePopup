@@ -137,6 +137,8 @@ class BubblePopup: UIView {
     }
      
     func setupDotLineView() {
+        guard let contentViewSub = contentView else { return }
+        
         switch positionType {
         case .top:
             let pY = linkPoint.y-dotBottomCirleWidth/2
@@ -150,7 +152,7 @@ class BubblePopup: UIView {
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
              
-            self.frame.size = CGSize(width: (contentView?.frame.width)!, height: (contentView?.frame.height)!+dotlineSize.height)
+            self.frame.size = CGSize(width: contentViewSub.frame.width, height: contentViewSub.frame.height+dotlineSize.height)
             drawDotLine(position: .top)
         case .bottom:
             let pY = linkPoint.y-dotlineSize.height-self.frame.height+dotBottomCirleWidth/2
@@ -164,27 +166,29 @@ class BubblePopup: UIView {
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
              
-            self.frame.size = CGSize(width: (contentView?.frame.width)!, height: (contentView?.frame.height)!+dotlineSize.height)
+            self.frame.size = CGSize(width: contentViewSub.frame.width, height: contentViewSub.frame.height+dotlineSize.height)
             drawDotLine(position: .bottom)
         case .left:
             let pY = linkPoint.y-self.frame.height/2
             let pMinX = linkPoint.x-dotBottomCirleWidth/2
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
-            self.frame.size = CGSize(width: (contentView?.frame.width)!+dotlineSize.height, height: (contentView?.frame.height)!)
+            self.frame.size = CGSize(width: contentViewSub.frame.width+dotlineSize.height, height: contentViewSub.frame.height)
             drawDotLine(position: .left)
         case .right:
             let pY = linkPoint.y-self.frame.height/2
             let pMinX = linkPoint.x-self.frame.width-dotlineSize.height+dotBottomCirleWidth/2
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
-            self.frame.size = CGSize(width: (contentView?.frame.width)!+dotlineSize.height, height: (contentView?.frame.height)!)
+            self.frame.size = CGSize(width: contentViewSub.frame.width+dotlineSize.height, height: contentViewSub.frame.height)
             drawDotLine(position: .right)
         }
         updateBGBubbleView(position: positionType)
     }
      
     func setupTriangleView() {
+        guard let contentViewSub = contentView else { return }
+        
         switch positionType {
         case .top:
             let pY = popupPoint.y
@@ -198,8 +202,10 @@ class BubblePopup: UIView {
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
              
-            self.frame.size = CGSize(width: (contentView?.frame.width)!, height: (contentView?.frame.height)!+triangleDistance.length)
+            self.frame.size = CGSize(width: contentViewSub.frame.width, height: contentViewSub.frame.height+triangleDistance.length)
             drawTriangle(position: .top)
+            
+            
         case .bottom:
             let pY = popupPoint.y-triangleDistance.length-self.frame.height
             let pMaxX = popupPoint.x+self.frame.width/2
@@ -212,7 +218,7 @@ class BubblePopup: UIView {
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
              
-            self.frame.size = CGSize(width: (contentView?.frame.width)!, height: (contentView?.frame.height)!+triangleDistance.length)
+            self.frame.size = CGSize(width: contentViewSub.frame.width, height: contentViewSub.frame.height+triangleDistance.length)
             drawTriangle(position: .bottom)
         case .left:
             let pY = popupPoint.y-self.frame.height/2
@@ -221,7 +227,7 @@ class BubblePopup: UIView {
  
             self.frame.origin = CGPoint(x: pMinX, y: pY)
              
-            self.frame.size = CGSize(width: (contentView?.frame.width)!+triangleDistance.length, height: (contentView?.frame.height)!)
+            self.frame.size = CGSize(width: contentViewSub.frame.width+triangleDistance.length, height: contentViewSub.frame.height)
             drawTriangle(position: .left)
         case .right:
             let pY = popupPoint.y-self.frame.height/2
@@ -229,7 +235,7 @@ class BubblePopup: UIView {
             let pMinX = popupPoint.x-triangleDistance.length-self.frame.width
             self.frame.origin = CGPoint(x: pMinX, y: pY)
              
-            self.frame.size = CGSize(width: (contentView?.frame.width)!+triangleDistance.length, height: (contentView?.frame.height)!)
+            self.frame.size = CGSize(width: contentViewSub.frame.width+triangleDistance.length, height: contentViewSub.frame.height)
             drawTriangle(position: .right)
         }
         updateTriangleBGBubbleView(position: positionType)
