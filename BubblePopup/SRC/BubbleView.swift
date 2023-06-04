@@ -26,9 +26,7 @@ class TextContentView: UIView {
    }()
    lazy private var closeButton: UIButton = {
        let button = UIButton()
-       button.setImage(UIImage(named: "close"), for: .normal)
        button.frame.size = CGSize(width: closeButtonWidth, height: closeButtonWidth)
-//        button.imageEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
        return button
    }()
     
