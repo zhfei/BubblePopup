@@ -15,7 +15,7 @@ class TextContentView: UIView {
    let closeButtonMargin = 5.0
    let textLabelLeft = 10.0
    let textLabelTop = 5.0
-
+   let bubbleCloseBtnXColor = UIColor.black
     
    lazy private var textLabel: UILabel = {
        let label = UILabel()
@@ -75,7 +75,7 @@ class TextContentView: UIView {
         dotLinePath.move(to: CGPoint(x: closeButtonMargin, y: closeButtonMargin))
         dotLinePath.addLine(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
         dotLineLayer.path = dotLinePath.cgPath
-        dotLineLayer.strokeColor = UIColor.black.cgColor
+        dotLineLayer.strokeColor = bubbleCloseBtnXColor.cgColor
         dotLineLayer.lineWidth = dotlineDistance.width
         btn.layer.addSublayer(dotLineLayer)
     }

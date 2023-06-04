@@ -16,10 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
- 
-    @IBAction func showTranglePopup(_ sender: UIButton) {
-        BubblePopupManager.shared.addPopup(toView: self.view, tips: "冒泡弹窗", popupType: .triangle, positionType: .bottom, popupPoint: CGPoint(x: sender.frame.midX, y: sender.frame.minY), linkPoint: nil, maxWidth: 200.0)
-    }
+
      
     @IBAction func showPopup(_ sender: UIButton) {
         if isDotLine {

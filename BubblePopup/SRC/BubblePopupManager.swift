@@ -20,26 +20,26 @@ class BubblePopupManager: NSObject {
         if popupType == .dotLine {
             switch positionType {
             case .top:
-                popup = DotLineTopBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, linkPoint: linkPoint!).getBubblePopup()
+                popup = DotLineTopBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
             case .bottom:
-                popup = DotLineBottomBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, linkPoint: linkPoint!).getBubblePopup()
+                popup = DotLineBottomBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
             case .left:
-                popup = DotLineLeftBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, linkPoint: linkPoint!).getBubblePopup()
+                popup = DotLineLeftBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
             case .right:
-                popup = DotLineRightBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, linkPoint: linkPoint!).getBubblePopup()
+                popup = DotLineRightBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
             
             }
             
         } else if popupType == .triangle {
             switch positionType {
             case .top:
-                popup = TriangleTopBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+                popup = TriangleTopBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
             case .bottom:
-                popup = TriangleBottomBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+                popup = TriangleBottomBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
             case .left:
-                popup = TriangleLeftBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+                popup = TriangleLeftBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
             case .right:
-                popup = TriangleRightBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+                popup = TriangleRightBubblePopupBuilder(tips: tips, customContentView: nil, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
             }
         }
          

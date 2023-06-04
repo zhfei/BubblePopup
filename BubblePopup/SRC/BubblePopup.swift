@@ -8,6 +8,8 @@
 import UIKit
 
 //MARK: 常量
+
+//虚线气泡常量
 //虚线图层容器的尺寸：length为linkPoint与气泡的连线长度，与气泡垂直。width为容器的宽度，与气泡平行。
 let dotlineDistance = BubbleDistance(width: 2, length: 35)
 //虚线底部浅色大圆直径
@@ -15,7 +17,19 @@ let dotLineBottomCircleDiameter = 10.0
 //虚线顶部浅色小圆直径
 let dotLineTopCircleDiameter = 6.0
 //三角形图层容器的尺寸：length为popupPoint与气泡的连线长度，与气泡垂直。width为容器的宽度，与气泡平行。
+//虚线颜色
+let bubbleDotLineFlagColor = UIColor.brown
+
+//三角形气泡常量
+//三角形图层容器尺寸：length为popupPoint与气泡的连线长度，与气泡垂直。width为容器的宽度，与气泡平行。
 let triangleDistance = BubbleDistance(width: 10, length: 10)
+//三角形颜色
+let bubbleTriangleFlagColor = UIColor.brown
+
+//气泡背景渐变色
+let bubbleBeginGradientColor = UIColor.yellow
+let bubbleEndGradientColor = UIColor.brown
+
 
 //MARK: 结构体
 enum BubblePopupType {
