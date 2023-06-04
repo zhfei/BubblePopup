@@ -15,12 +15,9 @@ class BubblePopupManager: NSObject {
      
     func addPopup(toView: UIView, tips: String, popupType:BubblePopupType, positionType: BubblePopupPositionType, popupPoint: CGPoint?, linkPoint: CGPoint?, maxWidth: Double) {
          
-//        var popup: BubblePopup?;
         var popup: BubblePopup?;
          
         if popupType == .dotLine {
-//            popup = BubblePopup(tips: tips, dotLinePositionType: positionType, linkPoint: linkPoint!, maxWidth: maxWidth)
-            
             switch positionType {
             case .top:
                 popup = DotLineTopBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, linkPoint: linkPoint!).getBubblePopup()
@@ -33,11 +30,7 @@ class BubblePopupManager: NSObject {
             
             }
             
-            
-            
         } else if popupType == .triangle {
-//            popup = BubblePopup(tips: tips, trianglePositionType: positionType, popupPoint: popupPoint!, maxWidth: maxWidth)
-            
             switch positionType {
             case .top:
                 popup = TriangleTopBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()

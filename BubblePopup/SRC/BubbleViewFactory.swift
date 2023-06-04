@@ -7,10 +7,11 @@
 
 import UIKit
 
-
-let dotlineSize = CGSize(width: 2, height: 35.0)
-let dotBottomCirleWidth = 10.0
-let dotTopCirleWidth = 6.0
+//虚线容器的尺寸：length为linkPoint与气泡的连线长度，与气泡垂直。width为容器的宽度，与气泡平行。
+let dotlineDistance = BubbleDistance(width: 2, length: 35)
+let dotLineBottomCircleDiameter = 10.0 //虚线底部浅色大圆直径
+let dotLineTopCircleDiameter = 6.0     //虚线顶部浅色小圆直径
+//三角形容器的尺寸：length为popupPoint与气泡的连线长度，与气泡垂直。width为容器的宽度，与气泡平行。
 let triangleDistance = BubbleDistance(width: 10, length: 10)
 
 class BubbleViewFactory {
@@ -53,7 +54,7 @@ extension BubbleViewFactory {
         dotLinePath.addLine(to: params.dotLine.endPoint(position: position))
         dotLineLayer.path = dotLinePath.cgPath
         dotLineLayer.strokeColor = dotColor.cgColor
-        dotLineLayer.lineWidth = dotlineSize.width
+        dotLineLayer.lineWidth = dotlineDistance.width
         let dashes: [NSNumber] = [4] // 虚线的样式
         dotLineLayer.lineDashPattern = dashes
         dotView.layer.addSublayer(dotLineLayer)

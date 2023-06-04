@@ -62,11 +62,26 @@ class TextContentView: UIView {
        textLabel.frame.origin = CGPoint(x: textLabelLeft, y: textLabelTop)
        closeButton.frame.origin = CGPoint(x: self.frame.width - closeButtonMargin - closeButtonWidth, y: self.frame.height/2.0 - closeButtonWidth/2.0)
        closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
-
+       addClose2Button(btn: closeButton)
 
        addSubview(textLabel)
        addSubview(closeButton)
    }
+    
+    func addClose2Button(btn: UIButton) {
+        let dotLineLayer = CAShapeLayer()
+        dotLineLayer.frame = btn.bounds
+        let dotLinePath = UIBezierPath()
+        dotLinePath.move(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: closeButtonMargin))
+        dotLinePath.addLine(to: CGPoint(x: closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
+        dotLinePath.move(to: CGPoint(x: closeButtonMargin, y: closeButtonMargin))
+        dotLinePath.addLine(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
+        dotLineLayer.path = dotLinePath.cgPath
+        dotLineLayer.strokeColor = UIColor.black.cgColor
+        dotLineLayer.lineWidth = dotlineDistance.width
+        btn.layer.addSublayer(dotLineLayer)
+    }
+    
     
    @objc
    func close(sender: UIButton) {
