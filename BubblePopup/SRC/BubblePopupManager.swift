@@ -37,6 +37,17 @@ class BubblePopupManager: NSObject {
             
         } else if popupType == .triangle {
 //            popup = BubblePopup(tips: tips, trianglePositionType: positionType, popupPoint: popupPoint!, maxWidth: maxWidth)
+            
+            switch positionType {
+            case .top:
+                popup = TriangleTopBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+            case .bottom:
+                popup = TriangleBottomBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+            case .left:
+                popup = TriangleLeftBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+            case .right:
+                popup = TriangleRightBubblePopupBuilder(tips: "弹了一个窗", customContentView: nil, maxWidth: 300, popupPoint: popupPoint!).getBubblePopup()
+            }
         }
          
         if let popupSub = popup {
