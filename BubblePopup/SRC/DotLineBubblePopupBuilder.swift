@@ -25,9 +25,8 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
         
     }
     
-    
-    // 获取DotLine绘制坐标
-    func getDotLineRectParams(position: BubblePopupPositionType) -> (dotLine:DotLineRect, dotBottomCirle:CGRect, dotTopCirle:CGRect) {
+    // 获取DotLine绘制相关坐标
+    func getDrawDotLineLayerRectParams(position: BubblePopupPositionType) -> (dotLine:DotLineRect, dotBottomCirle:CGRect, dotTopCirle:CGRect) {
         switch position {
         case .top:
             let dotLineRect = DotLineRect(x: dotLineBottomCircleDiameter/2, y: dotLineBottomCircleDiameter, width: dotlineDistance.width, length: dotlineDistance.length-dotLineBottomCircleDiameter)
@@ -51,8 +50,8 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
             return (dotLine:dotLineRect, dotBottomCirle:dotBottomCirleRect, dotTopCirle:dotTopCirleRect)
         }
     }
-    // 更新DotLine图层父视图的坐标
-    func getDotViewFrame(position: BubblePopupPositionType, targetPoint:CGPoint) -> CGRect {
+    // 获取DotLine图层父视图的坐标
+    func getDotLineLayerContainerViewFrame(position: BubblePopupPositionType, targetPoint:CGPoint) -> CGRect {
         switch position {
         case .top:
             return CGRect(x: targetPoint.x-dotLineBottomCircleDiameter/2, y: 0, width: dotLineBottomCircleDiameter, height: dotlineDistance.length)
@@ -64,7 +63,7 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
             return CGRect(x: 0, y:targetPoint.y-dotLineBottomCircleDiameter/2 , width: dotlineDistance.length, height: dotLineBottomCircleDiameter)
         }
     }
-    
+    // 对气泡弹框布局做更新
     func layoutDotLineBubblePopupView(bubblePopup: BubblePopup, positionType: BubblePopupPositionType) {
         guard let contentViewSub = bubblePopup.bubbleContentView else { return }
         guard let bubbleBGViewSub = bubblePopup.bubbleBGView else { return }
@@ -110,11 +109,11 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
             bubblePopup.frame.origin = CGPoint(x: pMinX, y: pY)
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width+dotlineDistance.length, height: contentViewSub.frame.height)
         }
-        updateBGBubbleView(position: positionType, bgBubbleView: bubbleBGViewSub)
+        updateBGBubbleViewFrame(position: positionType, bgBubbleView: bubbleBGViewSub)
         bubblePopup.bubbleContentView?.frame = bubbleBGViewSub.frame
     }
-    // 更新气泡视图的坐标
-    func updateBGBubbleView(position: BubblePopupPositionType, bgBubbleView: UIView) {
+    // 更新气泡背景视图的坐标
+    func updateBGBubbleViewFrame(position: BubblePopupPositionType, bgBubbleView: UIView) {
         switch position {
         case .top:
             bgBubbleView.frame.origin = CGPoint(x: 0, y: dotlineDistance.length)
@@ -137,8 +136,8 @@ class DotLineTopBubblePopupBuilder: DotLineBubblePopupBuilder {
     override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
-        let flagFrame = getDotViewFrame(position: .top, targetPoint: self.targetPoint)
-        let params = getDotLineRectParams(position: .top)
+        let flagFrame = getDotLineLayerContainerViewFrame(position: .top, targetPoint: self.targetPoint)
+        let params = getDrawDotLineLayerRectParams(position: .top)
         let flagBubbleView = BubbleViewFactory.generateDotLineBubbleFlagView(flagFrame: flagFrame, position: .top, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
@@ -155,8 +154,8 @@ class DotLineBottomBubblePopupBuilder: DotLineBubblePopupBuilder {
     override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
-        let flagFrame = getDotViewFrame(position: .bottom, targetPoint: self.targetPoint)
-        let params = getDotLineRectParams(position: .bottom)
+        let flagFrame = getDotLineLayerContainerViewFrame(position: .bottom, targetPoint: self.targetPoint)
+        let params = getDrawDotLineLayerRectParams(position: .bottom)
         let flagBubbleView = BubbleViewFactory.generateDotLineBubbleFlagView(flagFrame: flagFrame, position: .bottom, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
@@ -173,8 +172,8 @@ class DotLineLeftBubblePopupBuilder: DotLineBubblePopupBuilder {
     override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
-        let flagFrame = getDotViewFrame(position: .left, targetPoint: self.targetPoint)
-        let params = getDotLineRectParams(position: .left)
+        let flagFrame = getDotLineLayerContainerViewFrame(position: .left, targetPoint: self.targetPoint)
+        let params = getDrawDotLineLayerRectParams(position: .left)
         let flagBubbleView = BubbleViewFactory.generateDotLineBubbleFlagView(flagFrame: flagFrame, position: .left, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
@@ -191,8 +190,8 @@ class DotLineRightBubblePopupBuilder: DotLineBubblePopupBuilder {
     override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
-        let flagFrame = getDotViewFrame(position: .right, targetPoint: self.targetPoint)
-        let params = getDotLineRectParams(position: .right)
+        let flagFrame = getDotLineLayerContainerViewFrame(position: .right, targetPoint: self.targetPoint)
+        let params = getDrawDotLineLayerRectParams(position: .right)
         let flagBubbleView = BubbleViewFactory.generateDotLineBubbleFlagView(flagFrame: flagFrame, position: .right, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
