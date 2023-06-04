@@ -74,17 +74,17 @@ extension BubbleViewFactory {
         
         let triangleView = UIView(frame: flagFrame)
 
-        let dotLineLayer = CAShapeLayer()
-        dotLineLayer.frame = triangleView.bounds
+        let triangleLayer = CAShapeLayer()
+        triangleLayer.frame = triangleView.bounds
         let trianglePath = UIBezierPath()
         trianglePath.move(to: params.startPoint)
         trianglePath.addLine(to: params.point1)
         trianglePath.addLine(to: params.endPoint)
         trianglePath.close()
          
-        dotLineLayer.path = trianglePath.cgPath
-        dotLineLayer.fillColor = bubbleTriangleFlagColor.cgColor
-        triangleView.layer.addSublayer(dotLineLayer)
+        triangleLayer.path = trianglePath.cgPath
+        triangleLayer.fillColor = bubbleTriangleFlagColor.cgColor
+        triangleView.layer.addSublayer(triangleLayer)
         
         return triangleView
     }

@@ -67,17 +67,17 @@ class TextContentView: UIView {
    }
     
     func addClose2Button(btn: UIButton) {
-        let dotLineLayer = CAShapeLayer()
-        dotLineLayer.frame = btn.bounds
-        let dotLinePath = UIBezierPath()
-        dotLinePath.move(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: closeButtonMargin))
-        dotLinePath.addLine(to: CGPoint(x: closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
-        dotLinePath.move(to: CGPoint(x: closeButtonMargin, y: closeButtonMargin))
-        dotLinePath.addLine(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
-        dotLineLayer.path = dotLinePath.cgPath
-        dotLineLayer.strokeColor = bubbleCloseBtnXColor.cgColor
-        dotLineLayer.lineWidth = dotlineDistance.width
-        btn.layer.addSublayer(dotLineLayer)
+        let closeLayer = CAShapeLayer()
+        closeLayer.frame = btn.bounds
+        let closePath = UIBezierPath()
+        closePath.move(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: closeButtonMargin))
+        closePath.addLine(to: CGPoint(x: closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
+        closePath.move(to: CGPoint(x: closeButtonMargin, y: closeButtonMargin))
+        closePath.addLine(to: CGPoint(x: btn.bounds.width - closeButtonMargin, y: btn.bounds.height - closeButtonMargin))
+        closeLayer.path = closePath.cgPath
+        closeLayer.strokeColor = bubbleCloseBtnXColor.cgColor
+        closeLayer.lineWidth = dotlineDistance.width
+        btn.layer.addSublayer(closeLayer)
     }
     
     
