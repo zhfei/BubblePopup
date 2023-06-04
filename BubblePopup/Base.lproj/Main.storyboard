@@ -29,26 +29,26 @@
                                     <action selector="showPopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbX-Tg-8Al"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-0L-dnx">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-0L-dnx">
                                 <rect key="frame" x="273.5" y="361" width="67" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="EVw-vW-zc9"/>
                                     <constraint firstAttribute="height" constant="31" id="laC-c1-c20"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="右弹"/>
+                                <buttonConfiguration key="configuration" style="plain" title="左弹"/>
                                 <connections>
                                     <action selector="showPopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLR-5U-Zme"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pe-Ek-Kue">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pe-Ek-Kue">
                                 <rect key="frame" x="73.5" y="291" width="67" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="5fj-PS-llK"/>
                                     <constraint firstAttribute="height" constant="31" id="Xn0-ut-hEq"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="左弹"/>
+                                <buttonConfiguration key="configuration" style="plain" title="右弹"/>
                                 <connections>
                                     <action selector="showPopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l7Z-Uf-xQS"/>
                                 </connections>

@@ -40,14 +40,14 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
             let dotTopCirleRect = CGRect(x: (dotBottomCirleWidth-dotTopCirleWidth)/2, y: dotBottomCirleRect.minY+(dotBottomCirleWidth-dotTopCirleWidth)/2, width: dotTopCirleWidth, height: dotTopCirleWidth)
             return (dotLine:dotLineRect, dotBottomCirle:dotBottomCirleRect, dotTopCirle:dotTopCirleRect)
         case .left:
-            let dotLineRect = DotLineRect(x: dotBottomCirleWidth, y: dotBottomCirleWidth/2, width: dotlineSize.width, length: dotlineSize.height-dotBottomCirleWidth)
-            let dotBottomCirleRect = CGRect(x: 0, y: 0, width: dotBottomCirleWidth, height: dotBottomCirleWidth)
-            let dotTopCirleRect = CGRect(x: (dotBottomCirleWidth-dotTopCirleWidth)/2, y: (dotBottomCirleWidth-dotTopCirleWidth)/2, width: dotTopCirleWidth, height: dotTopCirleWidth)
-            return (dotLine:dotLineRect, dotBottomCirle:dotBottomCirleRect, dotTopCirle:dotTopCirleRect)
-        case .right:
             let dotLineRect = DotLineRect(x: 0, y: dotBottomCirleWidth/2, width: dotlineSize.width, length: dotlineSize.height-dotBottomCirleWidth)
             let dotBottomCirleRect = CGRect(x: dotlineSize.height-dotBottomCirleWidth, y: 0, width: dotBottomCirleWidth, height: dotBottomCirleWidth)
             let dotTopCirleRect = CGRect(x: dotBottomCirleRect.minX+(dotBottomCirleWidth-dotTopCirleWidth)/2, y: (dotBottomCirleWidth-dotTopCirleWidth)/2, width: dotTopCirleWidth, height: dotTopCirleWidth)
+            return (dotLine:dotLineRect, dotBottomCirle:dotBottomCirleRect, dotTopCirle:dotTopCirleRect)
+        case .right:
+            let dotLineRect = DotLineRect(x: dotBottomCirleWidth, y: dotBottomCirleWidth/2, width: dotlineSize.width, length: dotlineSize.height-dotBottomCirleWidth)
+            let dotBottomCirleRect = CGRect(x: 0, y: 0, width: dotBottomCirleWidth, height: dotBottomCirleWidth)
+            let dotTopCirleRect = CGRect(x: (dotBottomCirleWidth-dotTopCirleWidth)/2, y: (dotBottomCirleWidth-dotTopCirleWidth)/2, width: dotTopCirleWidth, height: dotTopCirleWidth)
             return (dotLine:dotLineRect, dotBottomCirle:dotBottomCirleRect, dotTopCirle:dotTopCirleRect)
         }
     }
@@ -59,9 +59,9 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
         case .bottom:
             return CGRect(x: targetPoint.x-dotBottomCirleWidth/2, y: targetPoint.y-dotlineSize.height+dotBottomCirleWidth/2, width: dotBottomCirleWidth, height: dotlineSize.height)
         case .left:
-            return CGRect(x: 0, y:targetPoint.y-dotBottomCirleWidth/2 , width: dotlineSize.height, height: dotBottomCirleWidth)
-        case .right:
             return CGRect(x: targetPoint.x-dotlineSize.height+dotBottomCirleWidth/2, y:targetPoint.y-dotBottomCirleWidth/2 , width: dotlineSize.height, height: dotBottomCirleWidth)
+        case .right:
+            return CGRect(x: 0, y:targetPoint.y-dotBottomCirleWidth/2 , width: dotlineSize.height, height: dotBottomCirleWidth)
         }
     }
     
@@ -99,13 +99,13 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width, height: contentViewSub.frame.height+dotlineSize.height)
         case .left:
             let pY = linkPoint.y-bubblePopup.frame.height/2
-            let pMinX = linkPoint.x-dotBottomCirleWidth/2
+            let pMinX = linkPoint.x-bubblePopup.frame.width-dotlineSize.height+dotBottomCirleWidth/2
  
             bubblePopup.frame.origin = CGPoint(x: pMinX, y: pY)
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width+dotlineSize.height, height: contentViewSub.frame.height)
         case .right:
             let pY = linkPoint.y-bubblePopup.frame.height/2
-            let pMinX = linkPoint.x-bubblePopup.frame.width-dotlineSize.height+dotBottomCirleWidth/2
+            let pMinX = linkPoint.x-dotBottomCirleWidth/2
  
             bubblePopup.frame.origin = CGPoint(x: pMinX, y: pY)
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width+dotlineSize.height, height: contentViewSub.frame.height)
@@ -121,9 +121,9 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
         case .bottom:
             bgBubbleView.frame.origin = CGPoint(x: 0, y: 0)
         case .left:
-            bgBubbleView.frame.origin = CGPoint(x: dotlineSize.height, y: 0)
-        case .right:
             bgBubbleView.frame.origin = CGPoint(x: 0, y: 0)
+        case .right:
+            bgBubbleView.frame.origin = CGPoint(x: dotlineSize.height, y: 0)
         }
     }
 }

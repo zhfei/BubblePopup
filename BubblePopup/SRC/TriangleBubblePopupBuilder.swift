@@ -39,14 +39,14 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
             let point2 = CGPoint(x: triangleDistance.width, y: 0)
             return (startPoint: point0, point1: point1, endPoint: point2)
         case .left:
-            let point0 = CGPoint(x: triangleDistance.width, y: 0)
-            let point1 = CGPoint(x: 0, y: triangleDistance.length/2)
-            let point2 = CGPoint(x: triangleDistance.width, y: triangleDistance.length)
-            return (startPoint: point0, point1: point1, endPoint: point2)
-        case .right:
             let point0 = CGPoint(x: 0, y: 0)
             let point1 = CGPoint(x: triangleDistance.width, y: triangleDistance.length/2)
             let point2 = CGPoint(x: 0, y: triangleDistance.length)
+            return (startPoint: point0, point1: point1, endPoint: point2)
+        case .right:
+            let point0 = CGPoint(x: triangleDistance.width, y: 0)
+            let point1 = CGPoint(x: 0, y: triangleDistance.length/2)
+            let point2 = CGPoint(x: triangleDistance.width, y: triangleDistance.length)
             return (startPoint: point0, point1: point1, endPoint: point2)
         }
          
@@ -60,9 +60,9 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
         case .bottom:
             return CGRect(x: targetPoint.x-triangleDistance.width/2, y: targetPoint.y-triangleDistance.length, width: triangleDistance.width, height: triangleDistance.length)
         case .left:
-            return CGRect(x: 0, y: targetPoint.y-triangleDistance.width/2, width: triangleDistance.length, height: triangleDistance.width)
-        case .right:
             return CGRect(x: targetPoint.x-triangleDistance.length, y:targetPoint.y-triangleDistance.width/2 , width: triangleDistance.length, height: triangleDistance.width)
+        case .right:
+            return CGRect(x: 0, y: targetPoint.y-triangleDistance.width/2, width: triangleDistance.length, height: triangleDistance.width)
         }
     }
     
@@ -102,16 +102,16 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width, height: contentViewSub.frame.height+triangleDistance.length)
         case .left:
             let pY = popupPoint.y-bubblePopup.frame.height/2
-//            let pMaxX = popupPoint.x+self.frame.width+triangleDistance.length
-            let pMinX = popupPoint.x
- 
+//            let pMaxX = popupPoint.x
+            let pMinX = popupPoint.x-triangleDistance.length-bubblePopup.frame.width
             bubblePopup.frame.origin = CGPoint(x: pMinX, y: pY)
              
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width+triangleDistance.length, height: contentViewSub.frame.height)
         case .right:
             let pY = popupPoint.y-bubblePopup.frame.height/2
-//            let pMaxX = popupPoint.x
-            let pMinX = popupPoint.x-triangleDistance.length-bubblePopup.frame.width
+//            let pMaxX = popupPoint.x+self.frame.width+triangleDistance.length
+            let pMinX = popupPoint.x
+ 
             bubblePopup.frame.origin = CGPoint(x: pMinX, y: pY)
              
             bubblePopup.frame.size = CGSize(width: contentViewSub.frame.width+triangleDistance.length, height: contentViewSub.frame.height)
@@ -128,9 +128,9 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
         case .bottom:
             bgBubbleView.frame.origin = CGPoint(x: 0, y: 0)
         case .left:
-            bgBubbleView.frame.origin = CGPoint(x: triangleDistance.length, y: 0)
-        case .right:
             bgBubbleView.frame.origin = CGPoint(x: 0, y: 0)
+        case .right:
+            bgBubbleView.frame.origin = CGPoint(x: triangleDistance.length, y: 0)
         }
     }
 
