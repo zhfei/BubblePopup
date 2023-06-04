@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BubblePopup1: UIView {
+class BubblePopup: UIView {
     var bubbleBGView: UIView?
     var bubbleContentView: UIView?
     var bubbleFlagView: UIView?

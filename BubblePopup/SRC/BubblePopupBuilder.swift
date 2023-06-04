@@ -46,7 +46,7 @@ struct BubbleDistance {
 }
 
 class BubblePopupBuilder {
-    private let bubblePopup = BubblePopup1()
+    private let bubblePopup = BubblePopup()
     private let tips: String?
     private let maxWidth: Double
     private var contentView: UIView?
@@ -64,7 +64,7 @@ class BubblePopupBuilder {
         addBubbleFlagView(to: bubblePopup)
     }
     
-    func addBubbleContentView(to bubblePopup: BubblePopup1) {
+    func addBubbleContentView(to bubblePopup: BubblePopup) {
         if let tipsSub = tips {
             let contentView = BubbleViewFactory.generateTextContentView(tipText: tipsSub, maxWidth: maxWidth)
             bubblePopup.bubbleContentView = contentView
@@ -72,19 +72,19 @@ class BubblePopupBuilder {
             bubblePopup.addSubview(contentView)
         }
     }
-    func addBubbleBGView(to bubblePopup: BubblePopup1) {
+    func addBubbleBGView(to bubblePopup: BubblePopup) {
         let bgBubble = BubbleViewFactory.generateBGBubbleView(bubbleSize: bubblePopup.frame.size)
         bubblePopup.bubbleBGView = bgBubble
         bubblePopup.insertSubview(bgBubble, at: 0)
         
     }
-    func updateLayout(to bubblePopup: BubblePopup1) {
+    func updateLayout(to bubblePopup: BubblePopup) {
         fatalError("must override")
     }
-    func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    func addBubbleFlagView(to bubblePopup: BubblePopup) {
         fatalError("must override")
     }
-    func getBubblePopup() -> BubblePopup1 {
+    func getBubblePopup() -> BubblePopup {
         return bubblePopup
     }
 }

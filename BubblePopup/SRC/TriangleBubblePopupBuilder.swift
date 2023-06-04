@@ -66,7 +66,7 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
         }
     }
     
-    func layoutTriangleBubblePopupView(bubblePopup: BubblePopup1, positionType: BubblePopupPositionType) {
+    func layoutTriangleBubblePopupView(bubblePopup: BubblePopup, positionType: BubblePopupPositionType) {
         guard let contentViewSub = bubblePopup.bubbleContentView else { return }
         guard let bubbleBGViewSub = bubblePopup.bubbleBGView else { return }
 
@@ -137,10 +137,10 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
 }
 
 class TriangleTopBubblePopupBuilder: TriangleBubblePopupBuilder {
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutTriangleBubblePopupView(bubblePopup: bubblePopup, positionType: .top)
     }
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleViewFrame(position: .top, targetPoint: self.targetPoint)
@@ -152,10 +152,10 @@ class TriangleTopBubblePopupBuilder: TriangleBubblePopupBuilder {
 }
 
 class TriangleBottomBubblePopupBuilder: TriangleBubblePopupBuilder {
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutTriangleBubblePopupView(bubblePopup: bubblePopup, positionType: .bottom)
     }
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleViewFrame(position: .bottom, targetPoint: self.targetPoint)
@@ -167,10 +167,10 @@ class TriangleBottomBubblePopupBuilder: TriangleBubblePopupBuilder {
 }
 
 class TriangleLeftBubblePopupBuilder: TriangleBubblePopupBuilder {
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutTriangleBubblePopupView(bubblePopup: bubblePopup, positionType: .left)
     }
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleViewFrame(position: .left, targetPoint: self.targetPoint)
@@ -182,10 +182,10 @@ class TriangleLeftBubblePopupBuilder: TriangleBubblePopupBuilder {
 }
 
 class TriangleRightBubblePopupBuilder: TriangleBubblePopupBuilder {
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutTriangleBubblePopupView(bubblePopup: bubblePopup, positionType: .right)
     }
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleViewFrame(position: .right, targetPoint: self.targetPoint)

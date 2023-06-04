@@ -17,7 +17,7 @@
 		918E69142A2A4206006B8771 /* BubblePopupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69132A2A4206006B8771 /* BubblePopupUITests.swift */; };
 		918E69162A2A4206006B8771 /* BubblePopupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69152A2A4206006B8771 /* BubblePopupUITestsLaunchTests.swift */; };
 		918E69262A2A423D006B8771 /* BubblePopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69252A2A423D006B8771 /* BubblePopupManager.swift */; };
-		918E69292A2B4A38006B8771 /* BubblePopup1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69282A2B4A38006B8771 /* BubblePopup1.swift */; };
+		918E69292A2B4A38006B8771 /* BubblePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E69282A2B4A38006B8771 /* BubblePopup.swift */; };
 		918E692B2A2B4A5F006B8771 /* BubblePopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E692A2A2B4A5F006B8771 /* BubblePopupBuilder.swift */; };
 		918E692D2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E692C2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift */; };
 		918E692F2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */; };
@@ -57,7 +57,7 @@
 		918E69132A2A4206006B8771 /* BubblePopupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupUITests.swift; sourceTree = "<group>"; };
 		918E69152A2A4206006B8771 /* BubblePopupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		918E69252A2A423D006B8771 /* BubblePopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupManager.swift; sourceTree = "<group>"; };
-		918E69282A2B4A38006B8771 /* BubblePopup1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopup1.swift; sourceTree = "<group>"; };
+		918E69282A2B4A38006B8771 /* BubblePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopup.swift; sourceTree = "<group>"; };
 		918E692A2A2B4A5F006B8771 /* BubblePopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupBuilder.swift; sourceTree = "<group>"; };
 		918E692C2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotLineBubblePopupBuilder.swift; sourceTree = "<group>"; };
 		918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleBubblePopupBuilder.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		918E69272A2B4A18006B8771 /* SRC */ = {
 			isa = PBXGroup;
 			children = (
-				918E69282A2B4A38006B8771 /* BubblePopup1.swift */,
+				918E69282A2B4A38006B8771 /* BubblePopup.swift */,
 				918E692A2A2B4A5F006B8771 /* BubblePopupBuilder.swift */,
 				918E692C2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift */,
 				918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */,
@@ -293,7 +293,7 @@
 				918E69332A2B4BD9006B8771 /* BubbleViewFactory.swift in Sources */,
 				918E68F32A2A4204006B8771 /* AppDelegate.swift in Sources */,
 				918E692B2A2B4A5F006B8771 /* BubblePopupBuilder.swift in Sources */,
-				918E69292A2B4A38006B8771 /* BubblePopup1.swift in Sources */,
+				918E69292A2B4A38006B8771 /* BubblePopup.swift in Sources */,
 				918E692F2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift in Sources */,
 				918E68F52A2A4204006B8771 /* SceneDelegate.swift in Sources */,
 				918E692D2A2B4A9C006B8771 /* DotLineBubblePopupBuilder.swift in Sources */,

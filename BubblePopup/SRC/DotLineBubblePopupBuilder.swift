@@ -65,7 +65,7 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
         }
     }
     
-    func layoutDotLineBubblePopupView(bubblePopup: BubblePopup1, positionType: BubblePopupPositionType) {
+    func layoutDotLineBubblePopupView(bubblePopup: BubblePopup, positionType: BubblePopupPositionType) {
         guard let contentViewSub = bubblePopup.bubbleContentView else { return }
         guard let bubbleBGViewSub = bubblePopup.bubbleBGView else { return }
 
@@ -130,11 +130,11 @@ class DotLineBubblePopupBuilder: BubblePopupBuilder {
 
 class DotLineTopBubblePopupBuilder: DotLineBubblePopupBuilder {
     
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutDotLineBubblePopupView(bubblePopup: bubblePopup, positionType: .top)
     }
     
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getDotViewFrame(position: .top, targetPoint: self.targetPoint)
@@ -148,11 +148,11 @@ class DotLineTopBubblePopupBuilder: DotLineBubblePopupBuilder {
 
 class DotLineBottomBubblePopupBuilder: DotLineBubblePopupBuilder {
     
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutDotLineBubblePopupView(bubblePopup: bubblePopup, positionType: .bottom)
     }
     
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getDotViewFrame(position: .bottom, targetPoint: self.targetPoint)
@@ -166,11 +166,11 @@ class DotLineBottomBubblePopupBuilder: DotLineBubblePopupBuilder {
 
 class DotLineLeftBubblePopupBuilder: DotLineBubblePopupBuilder {
     
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutDotLineBubblePopupView(bubblePopup: bubblePopup, positionType: .left)
     }
     
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getDotViewFrame(position: .left, targetPoint: self.targetPoint)
@@ -184,11 +184,11 @@ class DotLineLeftBubblePopupBuilder: DotLineBubblePopupBuilder {
 
 class DotLineRightBubblePopupBuilder: DotLineBubblePopupBuilder {
     
-    override func updateLayout(to bubblePopup: BubblePopup1) {
+    override func updateLayout(to bubblePopup: BubblePopup) {
         layoutDotLineBubblePopupView(bubblePopup: bubblePopup, positionType: .right)
     }
     
-    override func addBubbleFlagView(to bubblePopup: BubblePopup1) {
+    override func addBubbleFlagView(to bubblePopup: BubblePopup) {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getDotViewFrame(position: .right, targetPoint: self.targetPoint)

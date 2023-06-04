@@ -16,7 +16,7 @@ class BubblePopupManager: NSObject {
     func addPopup(toView: UIView, tips: String, popupType:BubblePopupType, positionType: BubblePopupPositionType, popupPoint: CGPoint?, linkPoint: CGPoint?, maxWidth: Double) {
          
 //        var popup: BubblePopup?;
-        var popup: BubblePopup1?;
+        var popup: BubblePopup?;
          
         if popupType == .dotLine {
 //            popup = BubblePopup(tips: tips, dotLinePositionType: positionType, linkPoint: linkPoint!, maxWidth: maxWidth)
