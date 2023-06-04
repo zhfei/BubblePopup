@@ -113,8 +113,7 @@
 		918E68F12A2A4204006B8771 /* BubblePopup */ = {
 			isa = PBXGroup;
 			children = (
-				918E69272A2B4A18006B8771 /* SRC0 */,
-				918E69222A2A4214006B8771 /* SRC */,
+				918E69272A2B4A18006B8771 /* SRC */,
 				918E68F22A2A4204006B8771 /* AppDelegate.swift */,
 				918E68F42A2A4204006B8771 /* SceneDelegate.swift */,
 				918E68F62A2A4204006B8771 /* ViewController.swift */,
@@ -143,15 +142,7 @@
 			path = BubblePopupUITests;
 			sourceTree = "<group>";
 		};
-		918E69222A2A4214006B8771 /* SRC */ = {
-			isa = PBXGroup;
-			children = (
-				918E69252A2A423D006B8771 /* BubblePopupManager.swift */,
-			);
-			path = SRC;
-			sourceTree = "<group>";
-		};
-		918E69272A2B4A18006B8771 /* SRC0 */ = {
+		918E69272A2B4A18006B8771 /* SRC */ = {
 			isa = PBXGroup;
 			children = (
 				918E69282A2B4A38006B8771 /* BubblePopup1.swift */,
@@ -160,8 +151,9 @@
 				918E692E2A2B4AD2006B8771 /* TriangleBubblePopupBuilder.swift */,
 				918E69322A2B4BD9006B8771 /* BubbleViewFactory.swift */,
 				918E69342A2C4351006B8771 /* BubbleView.swift */,
+				918E69252A2A423D006B8771 /* BubblePopupManager.swift */,
 			);
-			path = SRC0;
+			path = SRC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
