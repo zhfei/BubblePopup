@@ -38,7 +38,8 @@ enum BubblePopupType {
     // 三角形
     case triangle
 }
- 
+
+//这里的上下左右指的是flag标志相对弹窗的位置，站在气泡弹窗的视角。
 enum BubblePopupPositionType {
     case top
     case bottom
