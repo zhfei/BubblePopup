@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="702" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-pd-e37">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="60"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="三角气泡"/>
                                         <connections>
@@ -77,11 +77,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooA-Wn-pA1">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="60"/>
+                                        <rect key="frame" x="138" y="0.0" width="138" height="60"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="虚线气泡"/>
                                         <connections>
                                             <action selector="switchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUq-mo-Ayl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25m-v1-qtK">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="自定义View"/>
+                                        <connections>
+                                            <action selector="switchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDb-kp-o5Q"/>
                                         </connections>
                                     </button>
                                 </subviews>
