@@ -21,6 +21,11 @@ class ViewController: UIViewController {
 
      
     @IBAction func showPopup(_ sender: UIButton) {
+        let myContentView = CustomContentView()
+        
+        BubblePopupManager.shared.addPopup(toView: self.view, customContentView: myContentView, popupType: .dotLine, positionType: .bottom, popupPoint: nil, linkPoint: CGPoint(x: sender.frame.midX, y: sender.frame.minY), maxWidth: 200.0)
+        return
+        
         if isDotLine {
             //虚线气泡
             switch sender.tag {

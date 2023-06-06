@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91438BA42A2E2B8100FAF152 /* CustomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91438BA32A2E2B8100FAF152 /* CustomContentView.swift */; };
+		91438BA82A2E2BAD00FAF152 /* CustomContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91438BA72A2E2BAD00FAF152 /* CustomContentView.xib */; };
 		918E68F32A2A4204006B8771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E68F22A2A4204006B8771 /* AppDelegate.swift */; };
 		918E68F52A2A4204006B8771 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E68F42A2A4204006B8771 /* SceneDelegate.swift */; };
 		918E68F72A2A4204006B8771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E68F62A2A4204006B8771 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91438BA32A2E2B8100FAF152 /* CustomContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContentView.swift; sourceTree = "<group>"; };
+		91438BA72A2E2BAD00FAF152 /* CustomContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomContentView.xib; sourceTree = "<group>"; };
 		918E68EF2A2A4204006B8771 /* BubblePopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubblePopup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918E68F22A2A4204006B8771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918E68F42A2A4204006B8771 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				918E68FB2A2A4206006B8771 /* Assets.xcassets */,
 				918E68FD2A2A4206006B8771 /* LaunchScreen.storyboard */,
 				918E69002A2A4206006B8771 /* Info.plist */,
+				91438BA32A2E2B8100FAF152 /* CustomContentView.swift */,
+				91438BA72A2E2BAD00FAF152 /* CustomContentView.xib */,
 			);
 			path = BubblePopup;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 				918E68FF2A2A4206006B8771 /* LaunchScreen.storyboard in Resources */,
 				918E68FC2A2A4206006B8771 /* Assets.xcassets in Resources */,
 				918E68FA2A2A4204006B8771 /* Main.storyboard in Resources */,
+				91438BA82A2E2BAD00FAF152 /* CustomContentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +296,7 @@
 			files = (
 				918E69352A2C4351006B8771 /* BubbleView.swift in Sources */,
 				918E69262A2A423D006B8771 /* BubblePopupManager.swift in Sources */,
+				91438BA42A2E2B8100FAF152 /* CustomContentView.swift in Sources */,
 				918E68F72A2A4204006B8771 /* ViewController.swift in Sources */,
 				918E69332A2B4BD9006B8771 /* BubbleViewFactory.swift in Sources */,
 				918E68F32A2A4204006B8771 /* AppDelegate.swift in Sources */,

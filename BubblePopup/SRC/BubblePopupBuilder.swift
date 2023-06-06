@@ -17,6 +17,7 @@ class BubblePopupBuilder {
         self.tips = tips
         self.maxWidth = maxWidth
         self.contentView = customContentView;
+        bubblePopup.bubbleContentView = customContentView
         setupUI()
     }
     
@@ -30,10 +31,13 @@ class BubblePopupBuilder {
     func addBubbleContentView(to bubblePopup: BubblePopup) {
         if let tipsSub = tips {
             let contentView = BubbleViewFactory.generateTextContentView(tipText: tipsSub, maxWidth: maxWidth)
+            self.contentView = contentView;
             bubblePopup.bubbleContentView = contentView
-            bubblePopup.frame.size = contentView.frame.size
-            bubblePopup.addSubview(contentView)
         }
+ 
+        contentView!.frame.origin = .zero
+        bubblePopup.frame.size = contentView!.frame.size
+        bubblePopup.addSubview(contentView!)
     }
     func addBubbleBGView(to bubblePopup: BubblePopup) {
         let bgBubble = BubbleViewFactory.generateBGBubbleView(bubbleSize: bubblePopup.frame.size)

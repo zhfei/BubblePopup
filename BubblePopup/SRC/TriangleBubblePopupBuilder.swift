@@ -26,7 +26,7 @@ class TriangleBubblePopupBuilder: BubblePopupBuilder {
     }
     
     // 获取三角形绘制相关坐标
-    func getDrawTriangleLayeyRectParams(position: BubblePopupPositionType) -> (startPoint: CGPoint, point1: CGPoint, endPoint: CGPoint) {
+    func getDrawTriangleLayerRectParams(position: BubblePopupPositionType) -> (startPoint: CGPoint, point1: CGPoint, endPoint: CGPoint) {
         switch position {
         case .top:
             let point0 = CGPoint(x: 0, y: triangleDistance.length)
@@ -144,7 +144,7 @@ class TriangleTopBubblePopupBuilder: TriangleBubblePopupBuilder {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleLayerContainerViewFrame(position: .top, targetPoint: self.targetPoint)
-        let params = getDrawTriangleLayeyRectParams(position: .top)
+        let params = getDrawTriangleLayerRectParams(position: .top)
         let flagBubbleView = BubbleViewFactory.generateTriangleBubbleFlagView(flagFrame: flagFrame, position: .top, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
@@ -159,7 +159,7 @@ class TriangleBottomBubblePopupBuilder: TriangleBubblePopupBuilder {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleLayerContainerViewFrame(position: .bottom, targetPoint: self.targetPoint)
-        let params = getDrawTriangleLayeyRectParams(position: .bottom)
+        let params = getDrawTriangleLayerRectParams(position: .bottom)
         let flagBubbleView = BubbleViewFactory.generateTriangleBubbleFlagView(flagFrame: flagFrame, position: .bottom, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
@@ -174,7 +174,7 @@ class TriangleLeftBubblePopupBuilder: TriangleBubblePopupBuilder {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleLayerContainerViewFrame(position: .left, targetPoint: self.targetPoint)
-        let params = getDrawTriangleLayeyRectParams(position: .left)
+        let params = getDrawTriangleLayerRectParams(position: .left)
         let flagBubbleView = BubbleViewFactory.generateTriangleBubbleFlagView(flagFrame: flagFrame, position: .left, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)
@@ -189,7 +189,7 @@ class TriangleRightBubblePopupBuilder: TriangleBubblePopupBuilder {
         assert(!self.targetPoint.equalTo(.zero), "气泡提示点无效")
         
         let flagFrame = getTriangleLayerContainerViewFrame(position: .right, targetPoint: self.targetPoint)
-        let params = getDrawTriangleLayeyRectParams(position: .right)
+        let params = getDrawTriangleLayerRectParams(position: .right)
         let flagBubbleView = BubbleViewFactory.generateTriangleBubbleFlagView(flagFrame: flagFrame, position: .right, params: params)
         bubblePopup.bubbleFlagView = flagBubbleView
         bubblePopup.addSubview(flagBubbleView)

@@ -48,4 +48,38 @@ class BubblePopupManager: NSObject {
         }
     }
      
+    func addPopup(toView: UIView, customContentView: UIView, popupType:BubblePopupType, positionType: BubblePopupPositionType, popupPoint: CGPoint?, linkPoint: CGPoint?, maxWidth: Double) {
+              
+            var popup: BubblePopup?;
+              
+            if popupType == .dotLine {
+                switch positionType {
+                case .top:
+                    popup = DotLineTopBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
+                case .bottom:
+                    popup = DotLineBottomBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
+                case .left:
+                    popup = DotLineLeftBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
+                case .right:
+                    popup = DotLineRightBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, linkPoint: linkPoint!).getBubblePopup()
+                 
+                }
+                 
+            } else if popupType == .triangle {
+                switch positionType {
+                case .top:
+                    popup = TriangleTopBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
+                case .bottom:
+                    popup = TriangleBottomBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
+                case .left:
+                    popup = TriangleLeftBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
+                case .right:
+                    popup = TriangleRightBubblePopupBuilder(tips: nil, customContentView: customContentView, maxWidth: maxWidth, popupPoint: popupPoint!).getBubblePopup()
+                }
+            }
+              
+            if let popupSub = popup {
+                toView.addSubview(popupSub)
+            }
+        }
 }
