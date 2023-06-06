@@ -83,14 +83,13 @@ class TextContentView: UIView {
     
    @objc
    func close(sender: UIButton) {
-       if self.superview != nil {
+       if let supView = self.superview, supView is BubblePopup {
            UIView.animate(withDuration: 0.3) {
-               self.superview?.alpha = 0.3
+               supView.alpha = 0.3
            } completion: { res in
-               self.superview?.removeFromSuperview()
+               supView.removeFromSuperview()
            }
        }
-            
    }
     
    // MARK: - Public Method

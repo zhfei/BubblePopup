@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     enum BubblePopupType: Int {
-        case dotline = 11
-        case triangle
+        case triangle = 11
+        case dotline
         case custome
         
     }
