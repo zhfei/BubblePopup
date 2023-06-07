@@ -22,5 +22,15 @@ class CustomContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBAction func close(_ sender: Any) {
+        if let supView = self.superview as? BubblePopup {
+            UIView.animate(withDuration: 0.3) {
+                supView.alpha = 0.3
+            } completion: { res in
+                supView.removeFromSuperview()
+            }
+
+        }
+    }
     
 }
