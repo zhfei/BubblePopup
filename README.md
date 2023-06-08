@@ -21,12 +21,13 @@ BubblePopupManager.shared.addPopup(toView: self.view, customContentView: MyConte
 **气泡弹窗View的结构设计采用的设计模式为组合模式**
 把气泡弹窗分为3个部分：气泡背景，气泡指示器，气泡提示内容。
 在创建气泡弹窗时，根据子类的自定义实现，将这三部分分别创建并组装到一起。实现了功能的灵活插拔和自定义扩展。
+##### 气泡弹窗View类图
 ![](./images/uml_0.png)
 **气泡弹窗生成算法采用的设计模式为模版方法模式**
 在气泡构建基类中设置好气泡的构建步骤，把必要的部分或者提供默认实现的部分在父类中提供默认的实现，对其他需要自定义实现的部分，只在父类中写了一个抽象方法，具体实现交给子类自己实现。
-**虚线气泡弹窗类图**
+##### 虚线气泡弹窗类图
 ![](./images/uml_1.png)
-三角形气泡弹窗类图
+##### 三角形气泡弹窗类图
 ![](./images/uml_2.png)
 
 #### 核心实现
@@ -162,11 +163,14 @@ class TriangleTopBubblePopupBuilder: TriangleBubblePopupBuilder {
 其他bottom, left, right类型相似。
 
 #### 弹窗效果展示
-**三角形气泡弹窗**
+
+##### 三角形气泡弹窗
 ![](./images/bubble_0.png)
-**虚线气泡弹窗**
+
+##### 虚线气泡弹窗
 ![](./images/bubble_1.png)
-**自定义气泡弹窗**
+
+##### 自定义气泡弹窗
 ![](./images/bubble_2.png)
 
 
