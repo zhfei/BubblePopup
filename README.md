@@ -4,8 +4,8 @@
 在平时的开发中，通常新手引导页或功能提示页会出现气泡弹窗来做提示。如果遇到了这类功能通常需要花费一定的精力来写这么一个工具的，这里写了一个气泡弹窗工具，希望能帮你提升一些开发效率。
 
 #### 使用方法
-1.从gitHub上下载代码到本地，代码地址：https://github.com/zhfei/BubblePopup。
-2.调用BubblePopupManager文件内的单例方法，在指定的页面上添加气泡提示。
+1. 从gitHub上下载代码到本地，代码地址：https://github.com/zhfei/BubblePopup。
+2. 调用BubblePopupManager文件内的单例方法，在指定的页面上添加气泡提示。
 普通文本气泡弹窗使用方式如下：
 ```
 BubblePopupManager.shared.addPopup(toView: self.view, tips: "冒泡弹窗", popupType: .dotLine, positionType: .bottom, popupPoint: nil, linkPoint: CGPoint(x: sender.frame.midX, y: sender.frame.minY), maxWidth: 200.0)
